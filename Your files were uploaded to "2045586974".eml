@@ -1,0 +1,163 @@
+Delivered-To: teddycatcheway497@gmail.com
+Received: by 2002:a05:6000:1248:0:0:0:0 with SMTP id j8csp17928wrx;
+        Tue, 17 Dec 2019 16:06:46 -0800 (PST)
+X-Google-Smtp-Source: APXvYqwRwLjSfV3/UMLr19qjOILUqXqbMia1gQr1oNvqrGilsHLPh0ypcsIg+Cc9V6Fovzn/ZSmJ
+X-Received: by 2002:a0c:c351:: with SMTP id j17mr452682qvi.80.1576627605843;
+        Tue, 17 Dec 2019 16:06:45 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1576627605; cv=none;
+        d=google.com; s=arc-20160816;
+        b=paU82Dfy7CAedyUq6/fQiqDZnG/F5FusLKb1Wh0ku2sgpgdbQDDHeuGNmKlACbmN8g
+         sJRE+QO39rb+uWm4suSwFqvcJmZG8pmuKRl1StK5GIYh1+k9t14YA0L2vQGYub67bDTu
+         HLXXt48R7nDS93n8ljG66qteZDpFtcWAO4bxiRyk2u8M5ww1UyekpROA2SXQb+mFM+Tt
+         cMPeuz1Kxg5lyG9yUmqmx8SEMc9t5bIbKxd4L+hYFC+/wdzWW4Rq/GeyBHqt9EJx8MFQ
+         +UfvJIpuBvl5ChgMi2P4OIdLru02KTddLatSjwHAKvRojNP7fsDTQg292vc821KyI+EZ
+         6vGQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:message-id:date:subject:cc:to:from:mime-version
+         :dkim-signature:dkim-signature;
+        bh=9o/xggjwM6jpENPoWLfjozP536uuL/grnfhekzWDWrQ=;
+        b=WWJ8qh79ML+xNjtYX3wijsbp017EQXQ4b0ybHBOg3Ju3ELgoPXtqCntoYdleD+PZu8
+         aF66MH/VpX3kl5JJFE/da4K/RRWug/beJ0ZN/4weYoBc5+kuQRl/3eeWelyLTgsf4Fvl
+         MNvtDtte+NvnwhDcsowLb6JoD1+6q96sPii2QrSHfg1tyuJapSz8jIagdXOTWBHWhrcJ
+         J+I1rzDKdNkUqmMFnye8H1n573NbTP5AtQDN9NhR0zz0qPpYk+0KGXsfNyl3ECPY+V0c
+         Mzky8jjXYM2+02iyfnVJRotL1lqGfEuOOOj/R417FjjOpg3FEdrFdyNGwPMYJEpMhPUz
+         dXzA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dropbox.com header.s=rid2v4iwdmeb26wntc7bqs5dnqgasdul header.b=bylS9exD;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=RnADadxz;
+       spf=pass (google.com: domain of 0100016f16540fcf-8eaf38a4-659f-4136-a046-05c45cba9665-000000@email.dropbox.com designates 54.240.39.209 as permitted sender) smtp.mailfrom=0100016f16540fcf-8eaf38a4-659f-4136-a046-05c45cba9665-000000@email.dropbox.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=dropbox.com
+Return-Path: <0100016f16540fcf-8eaf38a4-659f-4136-a046-05c45cba9665-000000@email.dropbox.com>
+Received: from a39-209.smtp-out.amazonses.com (a39-209.smtp-out.amazonses.com. [54.240.39.209])
+        by mx.google.com with ESMTPS id x24si162519qtq.0.2019.12.17.16.06.45
+        for <teddycatcheway497@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Tue, 17 Dec 2019 16:06:45 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100016f16540fcf-8eaf38a4-659f-4136-a046-05c45cba9665-000000@email.dropbox.com designates 54.240.39.209 as permitted sender) client-ip=54.240.39.209;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dropbox.com header.s=rid2v4iwdmeb26wntc7bqs5dnqgasdul header.b=bylS9exD;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=RnADadxz;
+       spf=pass (google.com: domain of 0100016f16540fcf-8eaf38a4-659f-4136-a046-05c45cba9665-000000@email.dropbox.com designates 54.240.39.209 as permitted sender) smtp.mailfrom=0100016f16540fcf-8eaf38a4-659f-4136-a046-05c45cba9665-000000@email.dropbox.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=dropbox.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=rid2v4iwdmeb26wntc7bqs5dnqgasdul; d=dropbox.com; t=1576627605;
+	h=Content-Type:MIME-Version:From:To:CC:Subject:Date:Message-ID;
+	bh=zZyqcQWpIMJMYWQKfmzui+L182gdHhg/c5imlxNUr6g=;
+	b=bylS9exDWWh0x32uLxLxt+8tjSXbDFkH3zRfyAIEP7ddwpmVZb+SI2+PbUZEFq7W
+	4Kdkit4VJn0MUYqUuGECz36SYhIXkmpkkqr51EyO72o8MZv+LHAt0BW6ojHjs4qxSXX
+	cMGW0sg8XithwyNpHmBRkolv+HW32kDuk37MN7Ug=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1576627605;
+	h=Content-Type:MIME-Version:From:To:CC:Subject:Date:Message-ID:Feedback-ID;
+	bh=zZyqcQWpIMJMYWQKfmzui+L182gdHhg/c5imlxNUr6g=;
+	b=RnADadxz9ef9i/iwaQN33I8K2C6MXm/altpl+kNWozAaXMxEbRn/rTDsx+l26Tn/
+	43ku7n49+9WMElXQdd+kfaXk93L9h5Du9CwCbiAe+dDn/GA5FwrL7poam3HvxnfOQLg
+	+2sODtDOluMDrDvOVYIqKr3X9743SC8CihGlH/b8=
+Content-Type: multipart/alternative;
+ boundary="===============1882342682113553910=="
+MIME-Version: 1.0
+From: Dropbox <no-reply@dropbox.com>
+To: teddycatcheway497@gmail.com
+CC: 
+Subject: =?utf-8?q?Your_files_were_uploaded_to_=222045586974=22?=
+Date: Wed, 18 Dec 2019 00:06:45 +0000
+Message-ID: <0100016f16540fcf-8eaf38a4-659f-4136-a046-05c45cba9665-000000@email.amazonses.com>
+X-Dropbox-Message-ID: 5386413577908790569
+X-SES-Outgoing: 2019.12.18-54.240.39.209
+Feedback-ID: 1.us-east-1.syWQ1+fF8Wo1tY8y/+s85ptiAKu7bILK6PHyxwpB+xo=:AmazonSES
+
+--===============1882342682113553910==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+Hi there,
+
+Here's what you uploaded to "2045586974":
+
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" border=3D"0"><t=
+r><td>Teddy Catcheway - Teddy Catcheway - Teddy Catcheway - takeout-2019041=
+5T214604Z-001-2.zip</td></tr><tr><td>Teddy Catcheway - 2019-04-18_022833-1.=
+bk</td></tr></table>
+
+Best,
+- The Dropbox Team
+
+P.S. Need to get docs or photos from people? Create your own request.[1]
+
+[1]: https://www.dropbox.com/l/AADKOh1Bbbcea_IlDS5RAWTuS7jMNKyFD4g/requests
+--===============1882342682113553910==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w=
+3.org/TR/REC-html40/loose.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">
+<style>
+        @font-face {
+            font-family: "proxima_nova";
+            src: url("https://www.dropbox.com/static/fonts/proximanova/prox=
+ima-nova-regular.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
+         =
+
+        a {
+            color: #007ee6;
+            text-decoration: none;
+        }
+        </style>
+</head> <body style=3D"padding: 0; width: 100% !important; -webkit-text-siz=
+e-adjust: 100%; margin: 0; -ms-text-size-adjust: 100%;" marginheight=3D"0" =
+marginwidth=3D"0"><center><table cellpadding=3D"8" cellspacing=3D"0" style=
+=3D"*width: 540px; padding: 0; width: 100% !important; background: #ffffff;=
+ margin: 0; background-color: #ffffff;" border=3D"0"><tr><td valign=3D"top">
+<table cellpadding=3D"0" cellspacing=3D"0" style=3D"border-radius: 4px; -we=
+bkit-border-radius: 4px; border: 1px #dceaf5 solid; -moz-border-radius: 4px=
+;" border=3D"0" align=3D"center">
+<tr><td colspan=3D"3" height=3D"6"></td></tr>
+<tr style=3D"line-height: 0px;"><td width=3D"100%" style=3D"font-size: 0px;=
+" align=3D"center" height=3D"1"><img src=3D"https://cfl.dropboxstatic.com/s=
+tatic/images/emails/logo_glyph_34_m1%402x.png" style=3D"max-height: 73px; w=
+idth: 40px; *width: 40px; *height: 73px;" catalogid=3D"logo_glyph_34_2x_png=
+" alt=3D"" width=3D"40px"></td></tr> <tr><td><table cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"line-height: 25px;" border=3D"0" align=3D"center">
+<tr><td colspan=3D"3" height=3D"30"></td></tr>
+<tr>
+<td width=3D"36"></td>
+<td width=3D"454" align=3D"left" style=3D"color: #444444; border-collapse: =
+collapse; font-size: 11pt; font-family: proxima_nova, 'Open Sans', 'Lucida =
+Grande', 'Segoe UI', Arial, Verdana, 'Lucida Sans Unicode', Tahoma, 'Sans S=
+erif'; max-width: 454px;" valign=3D"top">Hi there,<br><br>Here's what you u=
+ploaded to "2045586974":<br><br><table cellpadding=3D"0" cellspacing=3D"0" =
+align=3D"center" border=3D"0"><tr><td>Teddy Catcheway - Teddy Catcheway - T=
+eddy Catcheway - takeout-20190415T214604Z-001-2.zip</td></tr><tr><td>Teddy =
+Catcheway - 2019-04-18_022833-1.bk</td></tr></table><br><br>Best,<br>- The =
+Dropbox Team<br><br>P.S. Need to get docs or photos from people? <a href=3D=
+"https://www.dropbox.com/l/AADA3Nxhd5moa4q9w9GVw7AzXphR2qvGD9k/requests">Cr=
+eate your own request.</a>
+</td>
+<td width=3D"36"></td>
+</tr>
+<tr><td colspan=3D"3" height=3D"36"></td></tr>
+</table></td></tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" border=3D"0">
+<tr><td height=3D"10"></td></tr>
+<tr><td style=3D"padding: 0; border-collapse: collapse;"><table cellpadding=
+=3D"0" cellspacing=3D"0" align=3D"center" border=3D"0"><tr style=3D"color: =
+#a8b9c6; font-size: 11px; font-family: proxima_nova, 'Open Sans', 'Lucida G=
+rande', 'Segoe UI', Arial, Verdana, 'Lucida Sans Unicode', Tahoma, 'Sans Se=
+rif'; -webkit-text-size-adjust: none;">
+<td width=3D"400" align=3D"left"></td>
+<td width=3D"128" align=3D"right">&#169; 2019 Dropbox</td>
+</tr></table></td></tr>
+</table>
+</td></tr></table></center></body>
+</html><img width=3D"1" src=3D"https://www.dropbox.com/l/AAB6CeCBdOzv3__2OT=
+nkbEVtURcvZbStCKg" height=3D"1" />
+--===============1882342682113553910==--
